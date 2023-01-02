@@ -1,52 +1,24 @@
-// require("@nomicfoundation/hardhat-toolbox");
+require("@nomicfoundation/hardhat-toolbox");
+require("dotenv").config({ path: ".env" });
+require("@nomiclabs/hardhat-etherscan");
 
-// /** @type import('hardhat/config').HardhatUserConfig */
-// module.exports = {
-//   solidity: {
-//     compilers: [
-//       {
-//         version: "0.7.6",
-//         settings: {
-//           evmVersion: "istanbul",
-//           optimizer: {
-//             enabled: true,
-//             runs: 1000,
-//           },
-//         },
-//       },
-//     ],
-//   },
-//   networks: {
-//     hardhat: {
-//       forking: {
-//         url: "your",
-//       },
-//     },
-//   },
-// };
-
-require("@nomiclabs/hardhat-waffle");
-const API_URL = "Your testnet rpc link";
-const PRIVATE_KEY = "QgwvY0emyKBYpjSIj1t7wZrizeNhBNMp"
-const PUBLIC_KEY = "Your Account Address";
+const ALCHEMY_API_KEY_URL = process.env.ALCHEMY_API_KEY_URL;
+const GOERLI_PRIVATE_KEY = process.env.GOERLI_PRIVATE_KEY;
+const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY;
 
 module.exports = {
-  solidity: {
-    version: "0.7.6",
-    settings: {
-      optimizer: {
-        enabled: true,
-        runs: 5000,
-        details: { yul: false },
-      },
+  solidity: "0.7.6",
+  networks: {
+    goerli: {
+      url: "https://eth-goerli.g.alchemy.com/v2/QgwvY0emyKBYpjSIj1t7wZrizeNhBNMp",
+      accounts: ["d5f5147f1a924d20768b4fedf9fa70bb355477e0923c372dc418c5dc957ac4aa"],
     },
   },
-  networks: {
-    hardhat: {
-      forking: {
-        url: "https://eth-mainnet.g.alchemy.com/v2/xdjD09WhjdFRD64g1-D61CGDbtJtmfrZ",
-        accounts: [`0x${PRIVATE_KEY}`],
-      },
-    },
+  etherscan: {
+    // Your API key for Etherscan
+    // Obtain one at https://etherscan.io/
+    apiKey: "D2ZNYW7R5D35H4PP7SEJW3EYUAH5A2DFM6",
   },
 };
+
+//npm install --save-dev @nomiclabs/hardhat-etherscan
