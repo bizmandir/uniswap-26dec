@@ -1,15 +1,15 @@
 // Token addresses
-tdotAddrss=  "0xD832462B1bE2b0c600CC87b734E630408736E875";
-cokuAddress= "0x52e8ED5e47544b9Cf92f744EaAe0B1438B91Bb70";
-AskTrabaajoaddress= "0xF60be104fB98bDC81E3B0B9525C715a041f60c91";
+tdotAddrss=  "0x01cf58e264d7578D4C67022c58A24CbC4C4a304E";
+cokuAddress= "0xd038A2EE73b64F30d65802Ad188F27921656f28F";
+AskTrabaajoaddress= "0x25C0a2F0A077F537Bd11897F04946794c2f6f1Ef";
 
 // Uniswap contract address
-wethAddress= '0xA359D4C2D45495B6fbb2495e67ff2FF5D6fe1eF7';
-factoryAddress= '0x72C0C5e08f1B222475CF79bb6a7e650acf629927';
-swapRouterAddress= '0x7b8b250273B0C1407450E9F3333F9fDE01088CA7';
-nftDescriptorAddress= '0x6ecbc541f2fB1498b6b23772Ec1528dDdEdaDE64';
-positionDescriptorAddress= '0x66D5888faB880a7408174dbB3dbB0Dc6bD2a3c02';
-positionManagerAddress= '0x11A5396515c7b7FaD8152b42f099335F98cCA82c';
+wethAddress= "0x0F527785e39B22911946feDf580d87a4E00465f0";
+factoryAddress= "0x1D3EDBa836caB11C26A186873abf0fFeB8bbaE63";
+swapRouterAddress= "0x9C85258d9A00C01d00ded98065ea3840dF06f09c";
+nftDescriptorAddress= "0xFCFE742e19790Dd67a627875ef8b45F17DB1DaC6";
+positionDescriptorAddress= "0x398E4948e373Db819606A459456176D31C3B1F91";
+positionManagerAddress= "0xbe18A1B61ceaF59aEB6A9bC81AB4FB87D56Ba167";
 
 
 const artifacts = {
@@ -24,7 +24,7 @@ const Web3Modal = require("web3modal");
 bn.config({ EXPONENTIAL_AT: 999999, DECIMAL_PLACES: 40 });
 
 const MAINNET_URL =
-  "https://eth-goerli.g.alchemy.com/v2/cnURwhLXPAyeILTBwvvC3qw-iVg2VMmp";
+  "https://eth-mainnet.g.alchemy.com/v2/xdjD09WhjdFRD64g1-D61CGDbtJtmfrZ";
 
 const provider = new ethers.providers.JsonRpcProvider(MAINNET_URL);
 
