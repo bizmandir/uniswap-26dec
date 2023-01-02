@@ -26,6 +26,9 @@
 // };
 
 require("@nomiclabs/hardhat-waffle");
+const API_URL = "Your testnet rpc link";
+const PRIVATE_KEY = "QgwvY0emyKBYpjSIj1t7wZrizeNhBNMp"
+const PUBLIC_KEY = "Your Account Address";
 
 module.exports = {
   solidity: {
@@ -41,8 +44,8 @@ module.exports = {
   networks: {
     hardhat: {
       forking: {
-        url: "your",
-        accounts: [`0x${"your"}`],
+        url: "https://eth-mainnet.g.alchemy.com/v2/xdjD09WhjdFRD64g1-D61CGDbtJtmfrZ",
+        accounts: [`0x${PRIVATE_KEY}`],
       },
     },
   },
