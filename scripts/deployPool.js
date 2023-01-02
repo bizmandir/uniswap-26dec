@@ -3,17 +3,17 @@
 //rayyanAddrss = "0x1D3EDBa836caB11C26A186873abf0fFeB8bbaE63";
 //popUpAddress = "0x9C85258d9A00C01d00ded98065ea3840dF06f09c";
 
-tdotAddress= "0x398E4948e373Db819606A459456176D31C3B1F91",
-cokuAddrss= "0xbe18A1B61ceaF59aEB6A9bC81AB4FB87D56Ba167",
-AskTrabaajoaddress= "0xFCFE742e19790Dd67a627875ef8b45F17DB1DaC6",
+tdotAddress= "0xdD3ff18d5dc010fA9911756572E0Ac2016DB7808",
+cokuAddrss= "0xA87e6703b9243941Af4Ebd0F152566F5D26B30d1",
+AskTrabaajoaddress= "0xA5a9fECBd49963eFc946d8b5B36b165CA70C359C",
 
 // Uniswap contract address
-wethAddress = "0xe044814c9eD1e6442Af956a817c161192cBaE98F";
-factoryAddress = "0xaB837301d12cDc4b97f1E910FC56C9179894d9cf";
-swapRouterAddress = "0x4ff1f64683785E0460c24A4EF78D582C2488704f";
-nftDescriptorAddress = "0x0F527785e39B22911946feDf580d87a4E00465f0";
-positionDescriptorAddress = "0x1D3EDBa836caB11C26A186873abf0fFeB8bbaE63";
-positionManagerAddress = "0x9C85258d9A00C01d00ded98065ea3840dF06f09c";
+wethAddress = "0x6F6fbe0dD1A1D157e23fab3392e9ef99f7e03BFC";
+factoryAddress = "0x826A7339Ac4802153C98e6EA9f46F22cfC567Ac9";
+swapRouterAddress = "0x884D26e1070E3b74533FDd9C4Ccb984ebbBD490d";
+nftDescriptorAddress = "0xe6E2407a888bB82AbFdDe11756Cd1441C61B68EB";
+positionDescriptorAddress = "0x2175d59A91b5279e15e6EBBF8DBe539Fe9817fB9";
+positionManagerAddress = "0x16A32d960fAD1B28dFd3a1a4caAf3285FAF58163";
 
 const artifacts = {
   UniswapV3Factory: require("@uniswap/v3-core/artifacts/contracts/UniswapV3Factory.sol/UniswapV3Factory.json"),
