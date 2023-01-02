@@ -26,7 +26,7 @@ const bn = require("bignumber.js");
 const Web3Modal = require("web3modal");
 bn.config({ EXPONENTIAL_AT: 999999, DECIMAL_PLACES: 40 });
 
-const MAINNET_URL = "https://eth-mainnet.g.alchemy.com/v2/xdjD09WhjdFRD64g1-D61CGDbtJtmfrZ";
+const MAINNET_URL = "https://eth-goerli.g.alchemy.com/v2/QgwvY0emyKBYpjSIj1t7wZrizeNhBNMp";
 
 const provider = new ethers.providers.JsonRpcProvider(MAINNET_URL);
 
@@ -55,7 +55,7 @@ const factory = new Contract(
 
 async function deployPool(token0, token1, fee, price) {
   const [owner] = await ethers.getSigners();
-  const MAINNET_URL = "https://eth-mainnet.g.alchemy.com/v2/xdjD09WhjdFRD64g1-D61CGDbtJtmfrZ";
+  const MAINNET_URL = "https://eth-goerli.g.alchemy.com/v2/QgwvY0emyKBYpjSIj1t7wZrizeNhBNMp";
 
   const WALLET_ADDRESS = "0xa985030E0c261D4b663Fd5752250FAe2419DC01D";
   const WALLET_SECRET = "d5f5147f1a924d20768b4fedf9fa70bb355477e0923c372dc418c5dc957ac4aa";
