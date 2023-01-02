@@ -1,30 +1,32 @@
 // Token addresses
-tdotAddrss=  "0x01cf58e264d7578D4C67022c58A24CbC4C4a304E";
-cokuAddress= "0xd038A2EE73b64F30d65802Ad188F27921656f28F";
-AskTrabaajoaddress= "0x25C0a2F0A077F537Bd11897F04946794c2f6f1Ef";
+//shoaibAddress = "0x0F527785e39B22911946feDf580d87a4E00465f0";
+//rayyanAddrss = "0x1D3EDBa836caB11C26A186873abf0fFeB8bbaE63";
+//popUpAddress = "0x9C85258d9A00C01d00ded98065ea3840dF06f09c";
+
+tdotAddress= "0x398E4948e373Db819606A459456176D31C3B1F91",
+cokuAddrss= "0xbe18A1B61ceaF59aEB6A9bC81AB4FB87D56Ba167",
+AskTrabaajoaddress= "0xFCFE742e19790Dd67a627875ef8b45F17DB1DaC6",
 
 // Uniswap contract address
-wethAddress= "0x0F527785e39B22911946feDf580d87a4E00465f0";
-factoryAddress= "0x1D3EDBa836caB11C26A186873abf0fFeB8bbaE63";
-swapRouterAddress= "0x9C85258d9A00C01d00ded98065ea3840dF06f09c";
-nftDescriptorAddress= "0xFCFE742e19790Dd67a627875ef8b45F17DB1DaC6";
-positionDescriptorAddress= "0x398E4948e373Db819606A459456176D31C3B1F91";
-positionManagerAddress= "0xbe18A1B61ceaF59aEB6A9bC81AB4FB87D56Ba167";
-
+wethAddress = "0xe044814c9eD1e6442Af956a817c161192cBaE98F";
+factoryAddress = "0xaB837301d12cDc4b97f1E910FC56C9179894d9cf";
+swapRouterAddress = "0x4ff1f64683785E0460c24A4EF78D582C2488704f";
+nftDescriptorAddress = "0x0F527785e39B22911946feDf580d87a4E00465f0";
+positionDescriptorAddress = "0x1D3EDBa836caB11C26A186873abf0fFeB8bbaE63";
+positionManagerAddress = "0x9C85258d9A00C01d00ded98065ea3840dF06f09c";
 
 const artifacts = {
   UniswapV3Factory: require("@uniswap/v3-core/artifacts/contracts/UniswapV3Factory.sol/UniswapV3Factory.json"),
   NonfungiblePositionManager: require("@uniswap/v3-periphery/artifacts/contracts/NonfungiblePositionManager.sol/NonfungiblePositionManager.json"),
 };
 
-// const { waffle } = require("hardhat");
+const { waffle } = require("hardhat");
 const { Contract, BigNumber } = require("ethers");
 const bn = require("bignumber.js");
 const Web3Modal = require("web3modal");
 bn.config({ EXPONENTIAL_AT: 999999, DECIMAL_PLACES: 40 });
 
-const MAINNET_URL =
-  "https://eth-mainnet.g.alchemy.com/v2/xdjD09WhjdFRD64g1-D61CGDbtJtmfrZ";
+const MAINNET_URL = "https://eth-mainnet.g.alchemy.com/v2/xdjD09WhjdFRD64g1-D61CGDbtJtmfrZ";
 
 const provider = new ethers.providers.JsonRpcProvider(MAINNET_URL);
 
@@ -52,7 +54,7 @@ const factory = new Contract(
 );
 
 async function deployPool(token0, token1, fee, price) {
-  // const [owner] = await ethers.getSigners();
+  const [owner] = await ethers.getSigners();
   const MAINNET_URL = "https://eth-mainnet.g.alchemy.com/v2/xdjD09WhjdFRD64g1-D61CGDbtJtmfrZ";
 
   const WALLET_ADDRESS = "0xa985030E0c261D4b663Fd5752250FAe2419DC01D";
@@ -68,20 +70,20 @@ async function deployPool(token0, token1, fee, price) {
 
   console.log(create);
   const poolAddress = await factory
-    .connect(signer)
+    .connect(owner)
     .getPool(token0, token1, fee);
   return poolAddress;
 }
 
 async function main() {
-  const shoRay = await deployPool(
-    tdotAddrss,
-    cokuAddress,
+  const askcoku = await deployPool(
+    AskTrabaajoaddress,
+    cokuAddrss,
     3000,
     encodePriceSqrt(1, 1)
   );
 
-  console.log("SHO_RAY=", `'${shoRay}'`);
+  console.log("ASK_COKU=", `'${askcoku}'`);
 }
 
 /*
