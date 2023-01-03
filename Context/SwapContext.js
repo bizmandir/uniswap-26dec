@@ -56,6 +56,7 @@ export const SwapTokenContextProvider = ({ children }) => {
     "0xdD3ff18d5dc010fA9911756572E0Ac2016DB7808",
     "0xA87e6703b9243941Af4Ebd0F152566F5D26B30d1",
     "0xA5a9fECBd49963eFc946d8b5B36b165CA70C359C",
+    ];
 
   //FETCH DATA
   const fetchingData = async () => {
